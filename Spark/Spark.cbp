@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Spark" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/Spark" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add directory="D:/Herramientas/SFML/SFML-2.5.1 - SEH/include" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+					<Add library="sfml-audio" />
+					<Add directory="D:/Herramientas/SFML/SFML-2.5.1 - SEH/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="include/Color/FillColor.hpp" />
+		<Unit filename="include/Color/FullColor.hpp" />
+		<Unit filename="include/Color/OutlineColor.hpp" />
+		<Unit filename="include/Container/BinaryTree.hpp" />
+		<Unit filename="include/Container/BinaryTreeNode.hpp" />
+		<Unit filename="include/Container/KeyNode.hpp" />
+		<Unit filename="include/Container/List.hpp" />
+		<Unit filename="include/Container/ListIterator.hpp" />
+		<Unit filename="include/Container/ListNode.hpp" />
+		<Unit filename="include/DataSource.hpp" />
+		<Unit filename="include/DataValue.hpp" />
+		<Unit filename="include/Game.hpp" />
+		<Unit filename="include/GameObject/Canvas.hpp" />
+		<Unit filename="include/GameObject/GameObject.hpp" />
+		<Unit filename="include/GameObject/GameSprite.hpp" />
+		<Unit filename="include/GameObject/GameText.hpp" />
+		<Unit filename="include/InputSource.hpp" />
+		<Unit filename="include/Screen.hpp" />
+		<Unit filename="include/Spark.hpp" />
+		<Unit filename="include/SpriteAnimation.hpp" />
+		<Unit filename="include/Transition/ColorInterpreter.hpp" />
+		<Unit filename="include/Transition/DoubleValueInterpreter.hpp" />
+		<Unit filename="include/Transition/OscillatingValueInterpreter.hpp" />
+		<Unit filename="include/Transition/Transition.hpp" />
+		<Unit filename="include/Transition/TranslationInterpreter.hpp" />
+		<Unit filename="include/Util.hpp" />
+		<Unit filename="source/Color/FillColor.cpp" />
+		<Unit filename="source/Color/OutlineColor.cpp" />
+		<Unit filename="source/DataSource.cpp" />
+		<Unit filename="source/Game.cpp" />
+		<Unit filename="source/GameObject/Canvas.cpp" />
+		<Unit filename="source/GameObject/GameObject.cpp" />
+		<Unit filename="source/GameObject/GameSprite.cpp" />
+		<Unit filename="source/GameObject/GameText.cpp" />
+		<Unit filename="source/InputSource.cpp" />
+		<Unit filename="source/Screen.cpp" />
+		<Unit filename="source/SpriteAnimation.cpp" />
+		<Unit filename="source/Transition/ColorInterpreter.cpp" />
+		<Unit filename="source/Transition/DoubleValueInterpreter.cpp" />
+		<Unit filename="source/Transition/OscillatingValueInterpreter.cpp" />
+		<Unit filename="source/Transition/Transition.cpp" />
+		<Unit filename="source/Transition/TranslationInterpreter.cpp" />
+		<Unit filename="source/Util.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

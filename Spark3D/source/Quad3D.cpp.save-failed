@@ -1,0 +1,64 @@
+#include "Quad3D.hpp"
+
+Quad3D::Quad3D( Vector3f p1, Vector3f p2, Vector3f p3, Vector3f p4, Color color, bool lines ) :
+    updated( false ),
+    targeted( false ),
+    points( { p1, p2, p3, p4 } ),
+    quad( lines ? PrimitiveType::LineStrip : PrimitiveType::Quads, 4 ){
+    for ( unsigned int i( 0 ); i < 4; ++i ){
+        quad[ i ].color = color;
+    }
+}
+
+void Quad3D::setColor( Color color ){
+    for ( unsigned int i( 0 ); i < 4; ++i ){
+        quad[ i ].color = color;
+    }
+}
+
+Color Quad3D::getColor(){
+    return quad[ 0 ].color;
+}
+
+bool Quad3D::isOpposite( Camera3D &camera ){
+    Vector3f v1( points[ 0 ] - points[ 3 ] );
+    v1 /= getMagnitude( v1 );
+    Vector3f v2( points[ 2 ] - points[ 3 ] );
+    v2 /= getMagnitude( v2 );
+    Vector3f n( v1 % v2 );
+    float d( points[ 3 ] * n );
+    float c( camera.position + camera.axes[  ] );
+    return camera.position * n > d;
+}
+
+float Quad3D::getDistance( Camera3D &camera ){
+    return min( getMagnitude( points[ 0 ] - camera.position ), min( getMagnitude( points[ 1 ] - camera.position ), min( getMagnitude( points[ 2 ] - camera.position ), getMagnitude( points[ 3 ] - camera.position ) ) ) );
+}
+
+void makeRotation( Vector3f axis, Vector3f origin, Vector3f *v, double rotation ){
+    *v = rotate( axis, origin, *v, rotation );
+}
+
+void Quad3D::rotate( Vector3f axis, Vector3f origin, double rotation ){
+    for ( unsigned int i( 0 ); i < 4; ++i ){
+        points[ i ] = ::rotate( axis, origin, points[ i ], rotation );
+    }
+    updated = false;
+}
+
+void Quad3D::translate( Vector3f translation ){
+    for ( unsigned int i( 0 ); i < 4; ++i ){
+        points[ i ] += translation;
+    }
+    updated = false;
+}
+
+void Quad3D::process( Camera3D &camera, RenderTarget &target ){
+    for ( unsigned int i( 0 ); i < 4; ++i ){
+        if ( !updated || !camera.updated ){
+            quad[ i ].position = camera.to2D( points[ i ] );
+        }
+    }
+    target.draw( quad );
+    updated = true;
+}

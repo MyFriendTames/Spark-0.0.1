@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Spark3D" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/Spark3D" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="Spark" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+					<Add library="sfml-audio" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="C:/Users/Diego Thames Vargas/Documents/Cosas/Mis proyectos/Spark/SFML/include" />
+			<Add directory="C:/Users/Diego Thames Vargas/Documents/Cosas/Mis proyectos/Spark/Spark/Spark 0.0.1/Spark/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add library="Spark" />
+			<Add library="sfml-graphics" />
+			<Add library="sfml-window" />
+			<Add library="sfml-system" />
+			<Add library="sfml-audio" />
+			<Add directory="C:/Users/Diego Thames Vargas/Documents/Cosas/Mis proyectos/Spark/SFML/lib" />
+			<Add directory="C:/Users/Diego Thames Vargas/Documents/Cosas/Mis proyectos/Spark/Spark/Spark 0.0.1/Spark/bin/Release" />
+		</Linker>
+		<Unit filename="include/Camera3D.hpp" />
+		<Unit filename="include/Context3D.hpp" />
+		<Unit filename="include/LightPoint3D.hpp" />
+		<Unit filename="include/Object3D.hpp" />
+		<Unit filename="include/Quad3D.hpp" />
+		<Unit filename="include/Spark3D.hpp" />
+		<Unit filename="include/Util3D.hpp" />
+		<Unit filename="source/Camera3D.cpp" />
+		<Unit filename="source/Context3D.cpp" />
+		<Unit filename="source/LightPoint3D.cpp" />
+		<Unit filename="source/Object3D.cpp" />
+		<Unit filename="source/Quad3D.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
