@@ -30,7 +30,7 @@ bool GameObject::isInside( const sf::Vector2f &point ){
     sf::Vector2f &&position( getPosition() );
     sf::Vector2f &&scale( getScale() );
     sf::Vector2f origin( getOrigin().x, getOrigin().y );
-    double &&rotation( getRotation() );
+    float &&rotation( getRotation() );
     sf::Vector2f zero( 0, 0 );
     sf::Vector2f p1( rotate( zero, - origin, rotation ) );
     sf::Vector2f p2( rotate( zero, sf::Vector2f( - origin.x + dimensions.x, - origin.y ), rotation ) );

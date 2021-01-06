@@ -25,8 +25,8 @@ class GameText : public GameObject, public FullColor{
         virtual sf::FloatRect getBounds();
         virtual void setPosition( const sf::Vector2f &position );
         virtual sf::Vector2f getPosition();
-        virtual void setRotation( const double &rotation );
-        virtual double getRotation();
+        virtual void setRotation( const float &rotation );
+        virtual float getRotation();
         virtual void setScale( const sf::Vector2f &scale );
         virtual sf::Vector2f getScale();
         virtual void setOrigin( const sf::Vector2f &origin );

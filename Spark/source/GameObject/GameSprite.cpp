@@ -36,11 +36,11 @@ sf::Vector2f GameSprite::getPosition(){
     return sprite.getPosition();
 }
 
-void GameSprite::setRotation( const double &rotation ){
+void GameSprite::setRotation( const float &rotation ){
     sprite.setRotation( rotation );
 }
 
-double GameSprite::getRotation(){
+float GameSprite::getRotation(){
     return sprite.getRotation();
 }
 

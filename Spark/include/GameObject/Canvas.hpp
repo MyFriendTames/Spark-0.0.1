@@ -40,8 +40,8 @@ class Canvas : public GameObject, public FullColor{
         sf::FloatRect getBounds();
         void setPosition( const sf::Vector2f &position );
         sf::Vector2f getPosition();
-        void setRotation( const double &rotation );
-        double getRotation();
+        void setRotation( const float &rotation );
+        float getRotation();
         void setScale( const sf::Vector2f &scale );
         sf::Vector2f getScale();
         void setOrigin( const sf::Vector2f &origin );

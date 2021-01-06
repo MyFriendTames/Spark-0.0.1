@@ -12,8 +12,8 @@ class GameObject{
         virtual sf::FloatRect getBounds() = 0;
         virtual void setPosition( const sf::Vector2f &position ) = 0;
         virtual sf::Vector2f getPosition() = 0;
-        virtual void setRotation( const double &rotation ) = 0;
-        virtual double getRotation() = 0;
+        virtual void setRotation( const float &rotation ) = 0;
+        virtual float getRotation() = 0;
         virtual void setScale( const sf::Vector2f &scale ) = 0;
         virtual sf::Vector2f getScale() = 0;
         virtual void setOrigin( const sf::Vector2f &origin ) = 0;

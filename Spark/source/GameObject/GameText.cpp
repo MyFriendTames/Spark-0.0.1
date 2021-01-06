@@ -53,11 +53,11 @@ sf::Vector2f GameText::getPosition(){
     return text.getPosition();
 }
 
-void GameText::setRotation( const double &rotation ){
+void GameText::setRotation( const float &rotation ){
     text.setRotation( rotation );
 }
 
-double GameText::getRotation(){
+float GameText::getRotation(){
     return text.getRotation();
 }
 

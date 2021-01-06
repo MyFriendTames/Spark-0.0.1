@@ -1,25 +1,21 @@
-#ifndef GAME_SPRITE_HPP
-#define GAME_SPRITE_HPP
+#ifndef GAME_CIRCLE_HPP
+#define GAME_CIRCLE_HPP
 
 #include <SFML/Graphics.hpp>
 
 #include "GameObject/GameObject.hpp"
-#include "Color/FillColor.hpp"
+#include "Color/FullColor.hpp"
 
-class SpriteAnimation;
-
-class GameSprite : public GameObject, public FillColor{
-    friend SpriteAnimation;
+class GameCircle : public GameObject, FullColor{
     private:
-        sf::Sprite sprite;
+        sf::CircleShape shape;
     public:
-        GameSprite() = default;
-        GameSprite( const sf::Texture &texture );
-        GameSprite( const sf::Texture &texture, const sf::IntRect &rect );
-        void setTexture( const sf::Texture &texture, const bool &resetRect = false );
-        const sf::Texture *getTexture();
-        void setTextureRect( const sf::IntRect &rect );
-        sf::IntRect getTextureRect();
+        GameCircle() = default;
+        GameCircle( const float &radius, const size_t &pointCount = 30 );
+        void setRadius( const float &radius );
+        float getRadius();
+        void setPointCount( const size_t &pointCount );
+        size_t getPointCount();
 
         virtual sf::FloatRect getBounds();
         virtual void setPosition( const sf::Vector2f &position );
@@ -34,6 +30,10 @@ class GameSprite : public GameObject, public FillColor{
 
         virtual void setFillColor( const sf::Color &color );
         virtual sf::Color getFillColor();
+        virtual void setOutlineColor( const sf::Color &color );
+        virtual sf::Color getOutlineColor();
+        virtual void setOutlineSize( const float &outlineSize );
+        virtual float getOutlineSize();
 };
 
 #endif

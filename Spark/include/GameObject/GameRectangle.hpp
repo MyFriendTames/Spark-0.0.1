@@ -1,25 +1,17 @@
-#ifndef GAME_SPRITE_HPP
-#define GAME_SPRITE_HPP
+#ifndef GAME_RECTANGLE_HPP
+#define GAME_RECTANGLE_HPP
 
 #include <SFML/Graphics.hpp>
 
 #include "GameObject/GameObject.hpp"
-#include "Color/FillColor.hpp"
+#include "Color/FullColor.hpp"
 
-class SpriteAnimation;
-
-class GameSprite : public GameObject, public FillColor{
-    friend SpriteAnimation;
+class GameRectangle : public GameObject, FullColor{
     private:
-        sf::Sprite sprite;
+        sf::RectangleShape shape;
     public:
-        GameSprite() = default;
-        GameSprite( const sf::Texture &texture );
-        GameSprite( const sf::Texture &texture, const sf::IntRect &rect );
-        void setTexture( const sf::Texture &texture, const bool &resetRect = false );
-        const sf::Texture *getTexture();
-        void setTextureRect( const sf::IntRect &rect );
-        sf::IntRect getTextureRect();
+        GameRectangle() = default;
+        GameRectangle( const sf::Vector2f &size );
 
         virtual sf::FloatRect getBounds();
         virtual void setPosition( const sf::Vector2f &position );
@@ -34,6 +26,10 @@ class GameSprite : public GameObject, public FillColor{
 
         virtual void setFillColor( const sf::Color &color );
         virtual sf::Color getFillColor();
+        virtual void setOutlineColor( const sf::Color &color );
+        virtual sf::Color getOutlineColor();
+        virtual void setOutlineSize( const float &outlineSize );
+        virtual float getOutlineSize();
 };
 
 #endif

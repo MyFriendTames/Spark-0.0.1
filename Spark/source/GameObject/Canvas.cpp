@@ -122,11 +122,11 @@ sf::Vector2f Canvas::getPosition(){
     return shape.getPosition();
 }
 
-void Canvas::setRotation( const double &rotation ){
+void Canvas::setRotation( const float &rotation ){
     shape.setRotation( rotation );
 }
 
-double Canvas::getRotation(){
+float Canvas::getRotation(){
     return shape.getRotation();
 }
 

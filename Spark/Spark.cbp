@@ -42,7 +42,9 @@
 		<Unit filename="include/DataValue.hpp" />
 		<Unit filename="include/Game.hpp" />
 		<Unit filename="include/GameObject/Canvas.hpp" />
+		<Unit filename="include/GameObject/GameCircle.hpp" />
 		<Unit filename="include/GameObject/GameObject.hpp" />
+		<Unit filename="include/GameObject/GameRectangle.hpp" />
 		<Unit filename="include/GameObject/GameSprite.hpp" />
 		<Unit filename="include/GameObject/GameText.hpp" />
 		<Unit filename="include/InputSource.hpp" />
@@ -60,7 +62,9 @@
 		<Unit filename="source/DataSource.cpp" />
 		<Unit filename="source/Game.cpp" />
 		<Unit filename="source/GameObject/Canvas.cpp" />
+		<Unit filename="source/GameObject/GameCircle.cpp" />
 		<Unit filename="source/GameObject/GameObject.cpp" />
+		<Unit filename="source/GameObject/GameRectangle.cpp" />
 		<Unit filename="source/GameObject/GameSprite.cpp" />
 		<Unit filename="source/GameObject/GameText.cpp" />
 		<Unit filename="source/InputSource.cpp" />

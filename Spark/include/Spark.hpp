@@ -18,6 +18,8 @@
 #include "GameObject/GameObject.hpp"
 #include "GameObject/GameText.hpp"
 #include "GameObject/GameSprite.hpp"
+#include "GameObject/GameCircle.hpp"
+#include "GameObject/GameRectangle.hpp"
 #include "GameObject/Canvas.hpp"
 
 //Containers
