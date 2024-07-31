@@ -1,6 +1,6 @@
 This is a very simple Game Development Framework for C++, it includes two major things:
-- Spark: game development framework
-- Spark3D: 3D rendering system for Spark
+- **Spark:** game development framework
+- **Spark3D:** 3D rendering system for Spark
 
 > This is a quite old project from a time where I didn't
 > even had a GitHub... I'm considering to update it now
